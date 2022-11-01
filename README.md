@@ -16,7 +16,7 @@ API, позволяющее сохранять конфигурацию в postg
 ## Здорово, что:
 - [ ] в качестве протокола взаимодействия сервиса с клиентами использовал gRPC
 - [x] написал Dockerfile и docker-compose.yml
-- [ ] покрыл проект unit-тестами
+- [x] покрыл проект unit-тестами
 - [ ] сделал тестовый пример использования написанного сервиса конфигураций
 
 ## Техническая реализация
@@ -29,6 +29,56 @@ API, позволяющее сохранять конфигурацию в postg
 </div>  
 
 ## Пример использования сервиса
+
+### Запуск
+
+Перед запуском убедитесь, что в системе установлен `docker` и `docker-compose` коомандами:
+
+```bash
+sudo docker --version
+sudo docker-compose --version
+```
+
+Да лее проверьте, запущен ли демон `docker`
+```bash
+sudo docker ps
+```
+
+Тогда можно поднимать сервис
+
+```bash
+git clone https://github.com/gdagil/distributed-config.git
+cd distributed-config
+sudo bash ./start.sh
+```
+
+### Тестирование
+
+После запуска всех контейнеров можно выполнить тестирование (полностью покрывает все запросы, описанные ниже)
+
+```bash
+python -m venv venv 
+```
+
+Для Linux
+
+```bash
+source venv/bin/activate
+```
+
+Для Windows
+
+```bash
+source venv/Scripts/activate
+```
+
+Далее устанавливаем пакеты и производим тестирование
+
+```bash
+pip install -r tests/requirements.txt
+pytest
+```
+
 
 ### Создание конфига
 

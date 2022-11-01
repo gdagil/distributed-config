@@ -1,4 +1,3 @@
-from datetime import timedelta
 from pydantic import BaseSettings
 
 # Базовая конфигурация сервиса
