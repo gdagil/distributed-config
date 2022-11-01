@@ -3,8 +3,8 @@ name: Docker build and push
 on:
   push:
     branches:
-      - feature-workflow
-    # tags: [ 'v*.*.*' ]
+      - master
+    tags: [ 'v*.*.*' ]
 
 env:
   REGISTRY: docker.io
@@ -51,5 +51,6 @@ jobs:
           file: Dockerfile
           push: true
           tags: |
+            ${{ steps.docker_meta.outputs.tags }}
             ${{ env.IMAGE_NAME }}:latest
           labels: ${{ steps.docker_meta.outputs.labels }}

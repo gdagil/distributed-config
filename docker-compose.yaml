@@ -7,9 +7,10 @@ networks:
 services:
   app:
     container_name: distributed-config
-    build:
-      context: ./app
-      dockerfile: Dockerfile
+    # build:
+    #   context: ./app
+    #   dockerfile: Dockerfile
+    image: danil2286/distributed-config:latest
     restart: always
     ports:
       - 8080:8080
