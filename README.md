@@ -1,3 +1,6 @@
+![Build](https://github.com/gdagil/distributed-config/actions/workflows/docker-publish.yaml/badge.svg)
+![Pytest](https://github.com/gdagil/distributed-config/actions/workflows/pytest.yaml/badge.svg)
+
 # Distributed config
 
 ## Описание
