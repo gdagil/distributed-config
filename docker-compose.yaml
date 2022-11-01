@@ -1,0 +1,19 @@
+version: '3.9'
+
+networks:
+  postgres-database:
+    external: true
+
+services:
+  app:
+    container_name: distributed-config
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - 8080:8080
+    env_file:
+      - ./.env.dev
+    networks:
+      - postgres-database
