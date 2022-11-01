@@ -1,3 +1,5 @@
+![Build](https://github.com/gdagil/distributed-config/actions/workflows/docker-publish.yaml/badge.svg)
+
 # Distributed config
 
 ## Описание
